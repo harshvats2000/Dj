@@ -125,7 +125,7 @@
         var storageRef = firebase.storage().ref();
         var k = 1;
         
-        databaseRef.on.child('apps').('child_added', snap => {
+        databaseRef.child('apps').on('child_added', snap => {
             var numOfChildren = snap.numChildren();//get number of apps
             var name = snap.val().name;
             var url = snap.val().url;
