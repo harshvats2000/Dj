@@ -11,41 +11,8 @@
     <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="Dj.css">
 
-    <style>
-        body {
-            margin: 0;
-            font-family: sans-serif;
-            background-image: url('bgdj.jpg');
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
-        .mdl-card__media > img {
-            max-width: 100%;
-            min-width: 100%;
-            min-height: 100%;
-            max-height: 100%;
-        }
-        .div {
-            /*display: none;*/
-            transition: 0.5s;
-            box-shadow: 1px 1px 15px deepskyblue;
-
-        }
-        .div:hover {
-            transform: scale(1.1);
-            z-index: 10;
-        }
-        .heading {
-            margin: 0px;
-        }
-        @media only screen and (min-width: 600px) {
-            .mdl-card__media > img {
-                max-height: 200px;
-                min-height: 200px;
-            }
-        }
-    </style>
 </head>
 
 <body>
@@ -54,44 +21,51 @@
         <header class="mdl-layout__header" style="min-height: 49px;">
             <!-- Tabs -->
             <div class="mdl-layout__tab-bar mdl-js-ripple-effect" style="height: 49px; position: fixed;">
-                <a href="#fixed-tab-1" class="mdl-layout__tab is-active">Home</a>
-                <a href="#fixed-tab-2" class="mdl-layout__tab">About me</a>
-                <a href="#fixed-tab-3" class="mdl-layout__tab">Contact me</a>
-                <a href="#fixed-tab-4" class="mdl-layout__tab">Privacy & policy</a>
+                <a href="#home" data-section="#home" class="mdl-layout__tab is-active">Home</a>
+                <a href="#aboutMe" data-section="#aboutMe" class="mdl-layout__tab">About me</a>
+                <a href="#contactMe" data-section="#contactMe" class="mdl-layout__tab">Contact me</a>
+                <a href="#pAndP" data-section="#pAndP" class="mdl-layout__tab">Privacy & policy</a>
             </div>
         </header>
 
         <main class="mdl-layout__content">
 
-            <section class="mdl-layout__tab-panel is-active" id="fixed-tab-1">
+            <section class="mdl-layout__tab-panel is-active" id="home">
                 <div class="page-content">
                     <div style="color: white; text-align: center;">
                             <h1 class="heading">Welcome!</h1>
                     </div>
+                        <div id="loader" style="text-align: center;">
+                        <div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+                        </div>
                     <div class="mdl-grid portfolio-max-width" id="myDiv" style="max-width: 900px;">
+
+                        <!-- Loader -->
 
 
                         <!-- Creating app elements in js below -->
+
+
                     </div>
                 </div>
             </section>
 
 
-            <section class="mdl-layout__tab-panel" id="fixed-tab-2">
+            <section class="mdl-layout__tab-panel" id="aboutMe" style="color: white;">
                 <div class="page-content">
                     about me
                 </div>
             </section>
 
 
-            <section class="mdl-layout__tab-panel" id="fixed-tab-3">
+            <section class="mdl-layout__tab-panel" id="contactMe">
                 <div class="page-content">
                     contact me
                 </div>
             </section>
 
 
-            <section class="mdl-layout__tab-panel" id="fixed-tab-4">
+            <section class="mdl-layout__tab-panel" id="pAndP">
                 <div class="page-content">
                     privacy and policy
                 </div>
@@ -128,10 +102,27 @@
     </script>
 
     <script>
+        function displayLoader() {
+            document.getElementById('loader').style.display = 'block';
+        }
+
+        function disappearLoader() {
+            document.getElementById('loader').style.display = 'none';
+        }
+
+        displayLoader();
 
         setTimeout(() => {
             $('.heading').fadeOut(2000, "swing");
         }, 1300);
+
+        $("a").on("click", function() {
+        var id = $(this).data("section");
+
+        $("section:visible").fadeOut(function() {
+            $(id).fadeIn();
+            });
+        });
 
         //create ref
         var databaseRef = firebase.database().ref();
@@ -148,7 +139,7 @@
             var img = document.createElement('img');
             var div3 = document.createElement('div');
             var h2 = document.createElement('h2');
-//             var div4 = document.createElement('div');
+            // var div4 = document.createElement('div');
             var div5 = document.createElement('div');
             var a = document.createElement('a');
             div1.className = "mdl-cell mdl-card mdl-shadow--4dp portfolio-card div div1";
@@ -160,13 +151,13 @@
             h2.className = "mdl-card__title-text app_"+k+"_name";
             k++;
             div3.className = "mdl-card__title";
-//             div4.className = "mdl-card__supporting-text";
+            // div4.className = "mdl-card__supporting-text";
             div5.className = "mdl-card__actions madl-card--border";
             a.className = "mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect";
             a.text = "VIEW";
             div1.appendChild(div2);
             div1.appendChild(div3);
-//             div1.appendChild(div4);
+            // div1.appendChild(div4);
             div1.appendChild(div5);
             div2.appendChild(img);
             div3.appendChild(h2);
@@ -174,9 +165,11 @@
             var t = document.createTextNode(name);
             div3.appendChild(t);
             document.getElementById('myDiv').appendChild(div1);
+            //fetching image
             storageRef.child('images/' + url).getDownloadURL().then(function(url) {
                 img.src = url;
             });
+            disappearLoader();
         })
     </script>
 </body></html>
