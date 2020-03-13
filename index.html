@@ -73,10 +73,6 @@
         </main>
     </div>
 
-    <div id="heading">heading</div>
-    <input type="text" id="mainText">
-    <button type="submit" id="submitBtn" onclick="submitClick()">submit</button>
-
     <script src="https://www.gstatic.com/firebasejs/7.9.3/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.9.3/firebase-analytics.js"></script>
     <script src="https://www.gstatic.com/firebasejs/3.3.0/firebase.js"></script>
@@ -129,10 +125,11 @@
         var storageRef = firebase.storage().ref();
         var k = 1;
         
-        databaseRef.on('child_added', snap => {
+        databaseRef.on.child('apps').('child_added', snap => {
             var numOfChildren = snap.numChildren();//get number of apps
             var name = snap.val().name;
             var url = snap.val().url;
+            var targetURL = snap.val().targetURL;
             //making new div
             var div1 = document.createElement('div');
             var div2 = document.createElement('div');
@@ -155,6 +152,7 @@
             div5.className = "mdl-card__actions madl-card--border";
             a.className = "mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect";
             a.text = "VIEW";
+            a.href = targetURL;
             div1.appendChild(div2);
             div1.appendChild(div3);
             // div1.appendChild(div4);
