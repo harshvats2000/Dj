@@ -33,17 +33,15 @@
 
         }
         .div:hover {
-            /*animation: animation1 0.7s;*/
-            /*box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);*/
             transform: scale(1.1);
             z-index: 10;
         }
         .heading {
             margin: 0px;
         }
-        @keyframes animation1 {
-            0% {
-                transform: rotate(-360deg);
+        @media only screen and (min-width: 600px) {
+            .mdl-card__media > img {
+                max-height: 200px;
             }
         }
     </style>
@@ -69,209 +67,10 @@
                     <div style="color: white; text-align: center;">
                             <h1 class="heading">Welcome!</h1>
                     </div>
-                    <div class="mdl-grid portfolio-max-width" style="max-width: 900px;">
-
-                        
-                        <div class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card div div1">
-                            <div class="mdl-card__media">
-                                <img class="article-image" id="img_1" border="0" alt="">
-                            </div>
-                            <div class="mdl-card__title">
-                                <h2 class="mdl-card__title-text app_1_name"></h2>
-                            </div>
-                            <div class="mdl-card__supporting-text">
-                                Enim labore aliqua consequat ut quis ad occaecat aliquip incididunt. Sunt nulla eu enim irure enim nostrud aliqua consectetur ad consectetur sunt ullamco officia. Ex officia laborum et consequat duis.
-                            </div>
-                            <div class="mdl-card__actions mdl-card--border">
-                                <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-                                    View
-                                </a>
-                            </div>
-                        </div>
+                    <div class="mdl-grid portfolio-max-width" id="myDiv" style="max-width: 900px;">
 
 
-                        <div class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card div div2">
-                            <div class="mdl-card__media">
-                                <img class="article-image" id="img_2" border="0" alt="">
-                            </div>
-                            <div class="mdl-card__title">
-                                <h2 class="mdl-card__title-text app_2_name"></h2>
-                            </div>
-                            <div class="mdl-card__supporting-text">
-                                Enim labore aliqua consequat ut quis ad occaecat aliquip incididunt. Sunt nulla eu enim irure enim nostrud aliqua consectetur ad consectetur sunt ullamco officia. Ex officia laborum et consequat duis.
-                            </div>
-                            <div class="mdl-card__actions mdl-card--border">
-                                <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="portfolio-example01.html">View</a>
-                            </div>
-                        </div>
-
-
-                        <div class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card div div3">
-                            <div class="mdl-card__media">
-                                <img class="article-image" id="img_3" border="0" alt="">
-                            </div>
-                            <div class="mdl-card__title">
-                                <h2 class="mdl-card__title-text app_3_name"></h2>
-                            </div>
-                            <div class="mdl-card__supporting-text">
-                                Enim labore aliqua consequat ut quis ad occaecat aliquip incididunt. Sunt nulla eu enim irure enim nostrud aliqua consectetur ad consectetur sunt ullamco officia. Ex officia laborum et consequat duis.
-                            </div>
-                            <div class="mdl-card__actions mdl-card--border">
-                                <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="portfolio-example01.html">View</a>
-                            </div>
-                        </div>
-
-                        <!-- <div class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card div div4">
-                            <div class="mdl-card__media">
-                                <img class="article-image" id="img_4" border="0" alt="">
-                            </div>
-                            <div class="mdl-card__title">
-                                <h2 class="mdl-card__title-text app_4_name"></h2>
-                            </div>
-                            <div class="mdl-card__supporting-text">
-                                Enim labore aliqua consequat ut quis ad occaecat aliquip incididunt. Sunt nulla eu enim irure enim nostrud aliqua consectetur ad consectetur sunt ullamco officia. Ex officia laborum et consequat duis.
-                            </div>
-                            <div class="mdl-card__actions mdl-card--border">
-                                <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="portfolio-example01.html">View</a>
-                            </div>
-                        </div>
-
-                        <div class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card div div5">
-                            <div class="mdl-card__media">
-                                <img class="article-image" id="img_5" border="0" alt="">
-                            </div>
-                            <div class="mdl-card__title">
-                                <h2 class="mdl-card__title-text app_5_name"></h2>
-                            </div>
-                            <div class="mdl-card__supporting-text">
-                                Enim labore aliqua consequat ut quis ad occaecat aliquip incididunt. Sunt nulla eu enim irure enim nostrud aliqua consectetur ad consectetur sunt ullamco officia. Ex officia laborum et consequat duis.
-                            </div>
-                            <div class="mdl-card__actions mdl-card--border">
-                                <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="portfolio-example01.html">View</a>
-                            </div>
-                        </div>
-
-                        <div class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card div div6">
-                            <div class="mdl-card__media">
-                                <img class="article-image" id="img_6" border="0" alt="">
-                            </div>
-                            <div class="mdl-card__title">
-                                <h2 class="mdl-card__title-text app_6_name"></h2>
-                            </div>
-                            <div class="mdl-card__supporting-text">
-                                Enim labore aliqua consequat ut quis ad occaecat aliquip incididunt. Sunt nulla eu enim irure enim nostrud aliqua consectetur ad consectetur sunt ullamco officia. Ex officia laborum et consequat duis.
-                            </div>
-                            <div class="mdl-card__actions mdl-card--border">
-                                <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="portfolio-example01.html">View</a>
-                            </div>
-                        </div>
-
-                        <div class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card div div7">
-                            <div class="mdl-card__media">
-                                <img class="article-image" id="img_7" border="0" alt="">
-                            </div>
-                            <div class="mdl-card__title">
-                                <h2 class="mdl-card__title-text app_7_name"></h2>
-                            </div>
-                            <div class="mdl-card__supporting-text">
-                                Enim labore aliqua consequat ut quis ad occaecat aliquip incididunt. Sunt nulla eu enim irure enim nostrud aliqua consectetur ad consectetur sunt ullamco officia. Ex officia laborum et consequat duis.
-                            </div>
-                            <div class="mdl-card__actions mdl-card--border">
-                                <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="portfolio-example01.html">View</a>
-                            </div>
-                        </div>
-
-                        <div class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card div div8">
-                            <div class="mdl-card__media">
-                                <img class="article-image" id="img_8" border="0" alt="">
-                            </div>
-                            <div class="mdl-card__title">
-                                <h2 class="mdl-card__title-text app_8_name"></h2>
-                            </div>
-                            <div class="mdl-card__supporting-text">
-                                Enim labore aliqua consequat ut quis ad occaecat aliquip incididunt. Sunt nulla eu enim irure enim nostrud aliqua consectetur ad consectetur sunt ullamco officia. Ex officia laborum et consequat duis.
-                            </div>
-                            <div class="mdl-card__actions mdl-card--border">
-                                <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="portfolio-example01.html">View</a>
-                            </div>
-                        </div>
-
-                        <div class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card div div9">
-                            <div class="mdl-card__media">
-                                <img class="article-image" id="img_9" border="0" alt="">
-                            </div>
-                            <div class="mdl-card__title">
-                                <h2 class="mdl-card__title-text app_9_name"></h2>
-                            </div>
-                            <div class="mdl-card__supporting-text">
-                                Enim labore aliqua consequat ut quis ad occaecat aliquip incididunt. Sunt nulla eu enim irure enim nostrud aliqua consectetur ad consectetur sunt ullamco officia. Ex officia laborum et consequat duis.
-                            </div>
-                            <div class="mdl-card__actions mdl-card--border">
-                                <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="portfolio-example01.html">View</a>
-                            </div>
-                        </div>
-
-                        <div class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card div div10">
-                            <div class="mdl-card__media">
-                                <img class="article-image" id="img_10" border="0" alt="">
-                            </div>
-                            <div class="mdl-card__title">
-                                <h2 class="mdl-card__title-text app_10_name"></h2>
-                            </div>
-                            <div class="mdl-card__supporting-text">
-                                Enim labore aliqua consequat ut quis ad occaecat aliquip incididunt. Sunt nulla eu enim irure enim nostrud aliqua consectetur ad consectetur sunt ullamco officia. Ex officia laborum et consequat duis.
-                            </div>
-                            <div class="mdl-card__actions mdl-card--border">
-                                <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="portfolio-example01.html">View</a>
-                            </div>
-                        </div>
-
-                        <div class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card div div11">
-                            <div class="mdl-card__media">
-                                <img class="article-image" id="img_11" border="0" alt="">
-                            </div>
-                            <div class="mdl-card__title">
-                                <h2 class="mdl-card__title-text app_11_name"></h2>
-                            </div>
-                            <div class="mdl-card__supporting-text">
-                                Enim labore aliqua consequat ut quis ad occaecat aliquip incididunt. Sunt nulla eu enim irure enim nostrud aliqua consectetur ad consectetur sunt ullamco officia. Ex officia laborum et consequat duis.
-                            </div>
-                            <div class="mdl-card__actions mdl-card--border">
-                                <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="portfolio-example01.html">View</a>
-                            </div>
-                        </div>
-
-                        <div class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card div div12">
-                            <div class="mdl-card__media">
-                                <img class="article-image" id="img_12" border="0" alt="">
-                            </div>
-                            <div class="mdl-card__title">
-                                <h2 class="mdl-card__title-text app_12_name"></h2>
-                            </div>
-                            <div class="mdl-card__supporting-text">
-                                Enim labore aliqua consequat ut quis ad occaecat aliquip incididunt. Sunt nulla eu enim irure enim nostrud aliqua consectetur ad consectetur sunt ullamco officia. Ex officia laborum et consequat duis.
-                            </div>
-                            <div class="mdl-card__actions mdl-card--border">
-                                <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="portfolio-example01.html">View</a>
-                            </div>
-                        </div>
-
-                        <div class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card div div13">
-                            <div class="mdl-card__media">
-                                <img class="article-image" id="img_13" border="0" alt="">
-                            </div>
-                            <div class="mdl-card__title">
-                                <h2 class="mdl-card__title-text app_13_name"></h2>
-                            </div>
-                            <div class="mdl-card__supporting-text">
-                                Enim labore aliqua consequat ut quis ad occaecat aliquip incididunt. Sunt nulla eu enim irure enim nostrud aliqua consectetur ad consectetur sunt ullamco officia. Ex officia laborum et consequat duis.
-                            </div>
-                            <div class="mdl-card__actions mdl-card--border">
-                                <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="portfolio-example01.html">View</a>
-                            </div>
-                        </div> -->
-
-
+                        <!-- Creating app elements in js below -->
                     </div>
                 </div>
             </section>
@@ -333,54 +132,50 @@
             $('.heading').fadeOut(2000, "swing");
         }, 1300);
 
-        var firebaseRef = firebase.database().ref();
+        //create ref
+        var databaseRef = firebase.database().ref();
         var storageRef = firebase.storage().ref();
         var k = 1;
-        var j = 0;
-        var arr = [];
-        var noOfChildren = 0;
-
-        firebaseRef.on("child_added", (snap) => {
-            
-            console.log(snap.val());
-            
-            //fetch name and url
-            snap.forEach(function() {
-                var name = snap.child("name").val();
-                var url = snap.child("url").val();
-                if(Number.isInteger(k)) {
-                    arr.push(url);
-                    $('.app_' + k + '_name').text(name);
-                }
-                k = k + 0.5;
-                j = j + 0.5;
+        
+        databaseRef.on('child_added', snap => {
+            var numOfChildren = snap.numChildren();//get number of apps
+            var name = snap.val().name;
+            var url = snap.val().url;
+            //making new div
+            var div1 = document.createElement('div');
+            var div2 = document.createElement('div');
+            var img = document.createElement('img');
+            var div3 = document.createElement('div');
+            var h2 = document.createElement('h2');
+            var div4 = document.createElement('div');
+            var div5 = document.createElement('div');
+            var a = document.createElement('a');
+            div1.className = "mdl-cell mdl-card mdl-shadow--4dp portfolio-card div div1";
+            div2.className = "mdl-card__media";
+            img.className = "article-image";
+            img.id = "img_"+k;
+            img.border = "0";
+            img.alt = "";    
+            h2.className = "mdl-card__title-text app_"+k+"_name";
+            k++;
+            div3.className = "mdl-card__title";
+            div4.className = "mdl-card__supporting-text";
+            div5.className = "mdl-card__actions madl-card--border";
+            a.className = "mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect";
+            a.text = "VIEW";
+            div1.appendChild(div2);
+            div1.appendChild(div3);
+            div1.appendChild(div4);
+            div1.appendChild(div5);
+            div2.appendChild(img);
+            div3.appendChild(h2);
+            div5.appendChild(a);
+            var t = document.createTextNode(name);
+            div3.appendChild(t);
+            document.getElementById('myDiv').appendChild(div1);
+            storageRef.child('images/' + url).getDownloadURL().then(function(url) {
+                img.src = url;
             });
-
-            //Count no. of data
-            firebaseRef.on('value', function(snap) {
-                noOfChildren = snap.numChildren();
-            });
-
-            //download and show images
-            if(j==noOfChildren){
-            myfunc();
-            var m =1;
-            async function myfunc() {
-                var i =0;
-                console.log(m);
-                m++;
-                for(i=0; i<j; i++){
-                //download images
-                await storageRef.child('images/' + arr[i]).getDownloadURL().then(function(url) {
-                	
-                    $('.div'+ (i + 1)).css("display", "block");
-                    var img = document.getElementById('img_' + (i + 1));
-                    img.src = url;
-            });
-            }
-            }
-        }
-        });
-            
+        })
     </script>
 </body></html>
