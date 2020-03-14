@@ -29,18 +29,19 @@
         </header>
 
         <main class="mdl-layout__content">
+            <div id="vantajs"></div>
 
             <section class="mdl-layout__tab-panel is-active" id="home">
                 <div class="page-content">
                     <div style="color: white; text-align: center;">
                             <h1 class="heading">Welcome!</h1>
                     </div>
+
+                    <!-- Loader -->
                         <div id="loader" style="text-align: center;">
                         <div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
                         </div>
                     <div class="mdl-grid portfolio-max-width" id="myDiv" style="max-width: 900px;">
-
-                        <!-- Loader -->
 
 
                         <!-- Creating app elements in js below -->
@@ -72,6 +73,21 @@
             </section>
         </main>
     </div>
+
+    <!-- Vanta background -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/100/three.min.js"></script>
+    <script src="https://www.vantajs.com/dist/vanta.birds.min.js"></script>
+
+    <script>
+        VANTA.BIRDS({
+          el: "#vantajs",
+          mouseControls: true,
+          touchControls: true,
+          scale: 1.00,
+          scaleMobile: 1.00,
+          color1: 0xc00ff
+        })
+    </script>
 
     <script src="https://www.gstatic.com/firebasejs/7.9.3/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.9.3/firebase-analytics.js"></script>
@@ -161,7 +177,7 @@
             div3.appendChild(h2);
             div5.appendChild(a);
             var t = document.createTextNode(name);
-            div3.appendChild(t);
+            h2.appendChild(t);
             document.getElementById('myDiv').appendChild(div1);
             //fetching image
             storageRef.child('images/' + url).getDownloadURL().then(function(url) {
