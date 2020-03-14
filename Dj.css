@@ -1,9 +1,15 @@
-body {
+html, body {
+    height: 100%;
     margin: 0;
+}
+#vantajs {
+  min-height: 100%;
+  min-width: 100%;
+  position: absolute;
+  z-index: -1;
+}
+body {
     font-family: sans-serif;
-    background-image: url('bgdj.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 .mdl-card__media > img {
     max-width: 100%;
