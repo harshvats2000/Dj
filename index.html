@@ -143,13 +143,14 @@
             var name = snap.val().name;
             var url = snap.val().url;
             var targetURL = snap.val().targetURL;
+            var description = snap.val().description;
             //making new div
             var div1 = document.createElement('div');
             var div2 = document.createElement('div');
             var img = document.createElement('img');
             var div3 = document.createElement('div');
             var h2 = document.createElement('h2');
-            // var div4 = document.createElement('div');
+            var div4 = document.createElement('div');
             var div5 = document.createElement('div');
             var a = document.createElement('a');
             div1.className = "mdl-cell mdl-card mdl-shadow--4dp portfolio-card div";
@@ -161,20 +162,22 @@
             h2.className = "mdl-card__title-text app_"+k+"_name";
             k++;
             div3.className = "mdl-card__title";
-            // div4.className = "mdl-card__supporting-text";
+            div4.className = "mdl-card__supporting-text";
             div5.className = "mdl-card__actions madl-card--border";
             a.className = "mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect";
             a.text = "VIEW";
             a.href = targetURL;
             div1.appendChild(div2);
             div1.appendChild(div3);
-            // div1.appendChild(div4);
+            div1.appendChild(div4);
             div1.appendChild(div5);
             div2.appendChild(img);
             div3.appendChild(h2);
             div5.appendChild(a);
             var t = document.createTextNode(name);
             h2.appendChild(t);
+            t = document.createTextNode(description);
+            div4.appendChild(t);
             document.getElementById('myDiv').appendChild(div1);
             //fetching image
             storageRef.child('images/' + url).getDownloadURL().then(function(url) {
